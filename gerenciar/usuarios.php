@@ -33,6 +33,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- JS Template -->
     <script defer src="../js/fontawesome-all.min.js"></script>
@@ -94,9 +95,9 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                     <td><?php echo $row_usuario['pnome']; ?></td>
                                     <td><?php echo $row_usuario['unome']; ?></td>
                                     <td><?php echo $row_usuario['email']; ?></td>
-                                    <td>
-                                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalVisualizar<?php echo $row_usuario['matricula']; ?>">Visualizar</button>
-                                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalApagar<?php echo $row_usuario['matricula']; ?>">Apagar</button>
+                                    <td class="tdBotoes">
+                                        <img class="botaoTabela" src="../imagem/user.png" alt="user" data-toggle="modal" data-target="#modalVisualizar<?php echo $row_usuario['matricula']; ?>">
+                                        <img class="botaoTabela" src="../imagem/remove.png" alt="del" data-toggle="modal" data-target="#modalApagar<?php echo $row_usuario['matricula']; ?>">
                                     </td>
                                 </tr>
                                 <!-- Inicio Modal Cadastrar-->
